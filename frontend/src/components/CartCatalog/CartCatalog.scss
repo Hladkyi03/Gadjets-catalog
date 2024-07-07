@@ -1,0 +1,39 @@
+@import '../../CssReset/variables';
+
+.cart-catalog {
+  grid-column: 1 / 17;
+  padding-top: 24px;
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__back-link {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    gap: 4px;
+    font-family: Mont-SemiBold, Courier, sans-serif;
+    color: $gray-secondary;
+    font-size: 12px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $gray-primary;
+    }
+
+    &::before {
+      content: url("../../media/icons/arrow-right.svg");
+      width: 16px;
+      height: 16px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    &--margin-top-24 {
+      margin-top: 24px;
+    }
+  }
+}

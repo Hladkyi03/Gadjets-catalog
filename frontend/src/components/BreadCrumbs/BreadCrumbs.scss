@@ -1,0 +1,41 @@
+@import "../../CssReset/variables";
+
+.breadcrumbs {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+  top: -16px;
+  grid-column: 1 / -1;
+
+  &__link {
+    height: 16px;
+  }
+
+  &__item {
+    color: $gray-secondary;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: end;
+    height: 16px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $gray-primary;
+    }
+
+    &::before {
+      content: url("../../media/icons/Breadcrumbs-Arrow.svg");
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+    }
+
+    &--no-hover {
+      &:hover {
+        color: $gray-secondary;
+      }
+    }
+  }
+}
